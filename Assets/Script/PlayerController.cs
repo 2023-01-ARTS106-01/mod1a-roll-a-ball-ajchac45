@@ -7,16 +7,16 @@ public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody rb;
-    
+    Vector2 movementVector;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponment<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void OnMove(InputValue movementValue)  
     {
-        Vector2 movementVector = movementValue.Get<Vector2>(); 
+         movementVector = movementValue.Get<Vector2>(); 
     }
 
     void FixedUpdate()
